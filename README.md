@@ -10,10 +10,13 @@ Salvador Ponce - Producer and Artist
 Inspired by Spybotics: Nightfall Incident, this game will feature food based characters and units. The player’s goal is the reach the (target item, files?). Theme might be Fruit Vs. Junk Food Wars, or something similar. This will be a tactics game, with no resource management. The grid will be 2d, but not isometric.
 
 Example Game Art, for Unit Portraits (originally created):
+
 ![Unit Portraits](/Art/example-food.png)
 
 Game Inspirations
+
 ![Nightfall Incident](https://static1.squarespace.com/static/579b8aa26b8f5b8f49605c96/5962ca3db11be1777323652c/5962ca3ebf629a39ce07681d/1499646527610/SpyboticsTheNightfallIncident.jpg?format=750w)
+
 ![Into the Breach](https://subsetgames.com/img/itb/ITB_ss_1.png)
 # Game Objects
 ## Units
