@@ -1,0 +1,9 @@
+Player:
+	KinematicBody2D
+	Sprite
+	set_fixed_process(true)
+	make _fixed_process(delta)
+	Make TOP/RIGHT/BOTTOM/LEFT Vector2 consts, for direction settings
+	Connect is_action_pressed() for each direction
+	Make speed and MAX_SPEED const
+	
