@@ -22,8 +22,8 @@ func _ready():
 
 func _process(delta):
 	if(Input.is_action_just_released("left_click")):
-		var posX = int(round(get_global_mouse_position().x / 32)) * 32
-		var posY = int(round(get_global_mouse_position().y / 32)) * 32
+		var posX = (int(round(get_global_mouse_position().x / 32)) * 32)
+		var posY = (int(round(get_global_mouse_position().y / 32)) * 32)
 		position.x = posX
 		position.y = posY
 		print("Grid Pos: ", position)
