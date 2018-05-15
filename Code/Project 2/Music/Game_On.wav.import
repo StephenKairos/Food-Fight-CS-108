@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Game_On.wav-6240d62d1a988078483906b2df00258b.sample"
+
+[deps]
+
+source_file="res://Music/Game_On.wav"
+source_md5="4de587579f74729f1dec27a679429c55"
+
+dest_files=[ "res://.import/Game_On.wav-6240d62d1a988078483906b2df00258b.sample" ]
+dest_md5="180df3c332706af7a6f80599dc267777"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
