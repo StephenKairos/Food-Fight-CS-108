@@ -41,7 +41,6 @@ func setSelection(selected):
 		N.isSelected = selected
 		
 func createUnit(newX, newY):
-	print(currentSize)
 	
 	if(currentSize == maxSize):
 		deleteUnit(1)
@@ -59,7 +58,12 @@ func createUnit(newX, newY):
 func deleteUnit(numUnits):
 	for i in range(numUnits):
 		for N in get_children():
-			if(N.emptyNeighbors == 3):
+			if(N.emptyNeighbors == 3 and !N.isHead):
+				for N2 in get_children():
+					if (abs(N2.unitGridX - N.unitGridX) == 1 and abs(N2.unitGridY - N.unitGridY) == 0) or (abs(N2.unitGridX - N.unitGridX) == 0 and abs(N2.unitGridY - N.unitGridY) == 1):
+						N2.emptyNeighbors += 1 
+						if(N2.emptyNeighbors >= 4):
+							N2.emptyNeighbors = 3
 				N.queue_free()
 				break
 	pass
