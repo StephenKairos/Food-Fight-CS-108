@@ -7,27 +7,27 @@ extends Node
 func _ready():
 	# Make player unit, test 1
 	var playerUnit = preload("res://Unit/Unit.tscn").instance()
-	playerUnit.init(0, 0, 0, 0, 4, 3, 5)
+	playerUnit.init(0, 0, 0, 0, 4, 3, 5, true)
 	add_child(playerUnit)
 	
 	playerUnit = preload("res://Unit/Unit.tscn").instance()
-	playerUnit.init(0, 0, 0, 0, 4, 3, 10)
+	playerUnit.init(0, 0, 0, 0, 4, 3, 10, true)
 	add_child(playerUnit)
 	
 	playerUnit = preload("res://Unit/Unit.tscn").instance()
-	playerUnit.init(0, 0, 0, 0, 4, 3, 15)
+	playerUnit.init(0, 0, 0, 0, 4, 3, 15, true)
 	add_child(playerUnit)
 	
 	playerUnit = preload("res://Unit/Unit.tscn").instance()
-	playerUnit.init(0, 0, 0, 0, 4, 21, 5)
+	playerUnit.init(0, 0, 0, 0, 4, 21, 5, false)
 	add_child(playerUnit)
 	
 	playerUnit = preload("res://Unit/Unit.tscn").instance()
-	playerUnit.init(0, 0, 0, 0, 4, 21, 10)
+	playerUnit.init(0, 0, 0, 0, 4, 21, 10, false)
 	add_child(playerUnit)
 	
 	playerUnit = preload("res://Unit/Unit.tscn").instance()
-	playerUnit.init(0, 0, 0, 0, 4, 21, 15)
+	playerUnit.init(0, 0, 0, 0, 4, 21, 15, false)
 	add_child(playerUnit)
 	
 	# var playerOne = preload("res://Unit/UnitBlock.tscn").instance()

@@ -15,6 +15,7 @@ onready var emptyNeighbors
 onready var unit_id
 onready var isHead
 onready var isSelected
+onready var isSmile
 
 onready var unitGridX
 onready var unitGridY
@@ -27,10 +28,14 @@ func _ready():
 	# Initialization here
 	pass
 	
-func init(parentX, parentY, gridX, gridY, head, eNeighbors):
+func init(parentX, parentY, gridX, gridY, head, eNeighbors, smile):
 	isHead = head
+	isSmile = smile
 	
-	get_child(4).show()
+	if isSmile:
+		get_child(8).show()
+	else:
+		get_child(9).show()
 	
 	emptyNeighbors = eNeighbors
 	pX = parentX
@@ -64,7 +69,7 @@ func _process(delta):
 			for i in range(5):
 				get_child(i).hide()
 			
-			get_child(5).show()
+			get_child(10).show()
 			
 			isHead = false
 			

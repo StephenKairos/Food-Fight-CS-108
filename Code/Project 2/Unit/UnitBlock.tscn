@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/UnitBlock.gd" type="Script" id=1]
 [ext_resource path="res://Gridmap/Grid1/move_tile.png" type="Texture" id=2]
-[ext_resource path="res://Gridmap/Grid1/smile_unit.png" type="Texture" id=3]
-[ext_resource path="res://Gridmap/Grid1/blank_unit.png" type="Texture" id=4]
+[ext_resource path="res://Gridmap/Grid1/attack_tile.png" type="Texture" id=3]
+[ext_resource path="res://Gridmap/Grid1/smile_unit.png" type="Texture" id=4]
+[ext_resource path="res://Gridmap/Grid1/wizard_unit.png" type="Texture" id=5]
+[ext_resource path="res://Gridmap/Grid1/blank_unit.png" type="Texture" id=6]
 
-[node name="Sprite" type="Sprite"]
+[node name="Sprite" type="Sprite" index="0"]
 
 script = ExtResource( 1 )
 
@@ -35,14 +37,45 @@ visible = false
 position = Vector2( -32, 0 )
 texture = ExtResource( 2 )
 
-[node name="smile_unit" type="Sprite" parent="." index="4"]
+[node name="up_attack" type="Sprite" parent="." index="4"]
 
 visible = false
+position = Vector2( 0, -32 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="right_attack" type="Sprite" parent="." index="5"]
+
+visible = false
+position = Vector2( 32, 0 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="down_attack" type="Sprite" parent="." index="6"]
+
+visible = false
+position = Vector2( 0, 32 )
 texture = ExtResource( 3 )
 
-[node name="blank_unit" type="Sprite" parent="." index="5"]
+[node name="left_attack" type="Sprite" parent="." index="7"]
+
+visible = false
+position = Vector2( -32, 0 )
+texture = ExtResource( 3 )
+
+[node name="smile_unit" type="Sprite" parent="." index="8"]
 
 visible = false
 texture = ExtResource( 4 )
+
+[node name="wizard_unit" type="Sprite" parent="." index="9"]
+
+visible = false
+texture = ExtResource( 5 )
+
+[node name="blank_unit" type="Sprite" parent="." index="10"]
+
+visible = false
+texture = ExtResource( 6 )
 
 

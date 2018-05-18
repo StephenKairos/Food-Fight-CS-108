@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var isSelected
+onready var isSmile
 
 onready var attackDamage
 
@@ -19,7 +20,7 @@ func _ready():
 	childList = []
 	isSelected = false
 
-func init(unitID, aDamage, mMove, cMove, mSize, x, y):
+func init(unitID, aDamage, mMove, cMove, mSize, x, y, smile):
 	unit_id = unitID
 	attackDamage = aDamage
 	maxMove = mMove
@@ -27,9 +28,10 @@ func init(unitID, aDamage, mMove, cMove, mSize, x, y):
 	maxSize = mSize
 	position.x = x * 32
 	position.y = y * 32
+	isSmile = smile
 	
 	var headBlock = preload("res://Unit/UnitBlock.tscn").instance()
-	headBlock.init((int(round(position.x / 32))), (int(round(position.y / 32))), 0, 0, true, 4)
+	headBlock.init((int(round(position.x / 32))), (int(round(position.y / 32))), 0, 0, true, 4, isSmile)
 	headBlock.show()
 	headBlock.connect("is_selected", self, "setSelection")
 	headBlock.connect("move_unit", self, "createUnit")
@@ -48,7 +50,7 @@ func createUnit(newX, newY):
 	
 	var headBlock = preload("res://Unit/UnitBlock.tscn").instance()
 	
-	headBlock.init((int(round(position.x / 32))), (int(round(position.y / 32))), newX, newY, true, 3)
+	headBlock.init((int(round(position.x / 32))), (int(round(position.y / 32))), newX, newY, true, 3, isSmile)
 	headBlock.show()
 	headBlock.connect("is_selected", self, "setSelection")
 	headBlock.connect("move_unit", self, "createUnit")
