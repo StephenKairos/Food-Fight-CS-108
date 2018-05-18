@@ -21,7 +21,7 @@ func _ready():
 #user input
 func _input(event):
 	if(event.is_action_pressed("ui_select")):
-	 get_tree().change_scene("res://Splash scene/main_menu.tscn")
+	 get_tree().change_scene("res://GameScenes/MainGame.tscn")
 	
 func fade_in_out():
 	anim_player.play("fading")
