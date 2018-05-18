@@ -1,0 +1,124 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://screens/splash_s.gd" type="Script" id=1]
+[ext_resource path="res://Splash scene/main_menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Music/Dayrise_Original.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "fading"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0.282353, 0.392157, 0.443137, 0.0784314 ), Color( 0.282353, 0.392157, 0.443137, 0.117647 ), Color( 0.282353, 0.392157, 0.443137, 0.156863 ), Color( 0.282353, 0.392157, 0.443137, 0.196078 ), Color( 0.282353, 0.392157, 0.443137, 0.235294 ), Color( 0.282353, 0.392157, 0.443137, 0.27451 ), Color( 0.282353, 0.392157, 0.443137, 0.313726 ), Color( 0.282353, 0.392157, 0.443137, 0.352941 ), Color( 0.282353, 0.392157, 0.443137, 0.392157 ), Color( 0.282353, 0.392157, 0.443137, 0.431373 ), Color( 0.282353, 0.392157, 0.443137, 0.431373 ), Color( 0.282353, 0.392157, 0.443137, 0.392157 ), Color( 0.282353, 0.392157, 0.443137, 0.352941 ), Color( 0.282353, 0.392157, 0.443137, 0.352941 ), Color( 0.282353, 0.392157, 0.443137, 0.313726 ), Color( 0.282353, 0.392157, 0.443137, 0.27451 ), Color( 0.282353, 0.392157, 0.443137, 0.235294 ), Color( 0.282353, 0.392157, 0.443137, 0.196078 ), Color( 0.282353, 0.392157, 0.443137, 0.156863 ), Color( 0.282353, 0.392157, 0.443137, 0.117647 ), Color( 0.282353, 0.392157, 0.443137, 0.0784314 ), Color( 0.282353, 0.392157, 0.443137, 0 ) ]
+}
+
+[node name="splash_s" type="Control" index="0"]
+
+modulate = Color( 0.321569, 0.588235, 0.666667, 0.0784314 )
+self_modulate = Color( 0, 0, 0, 0 )
+light_mask = 690521
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+next_scene = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 985.0
+margin_bottom = 561.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.286118, 0.389333, 0.443137, 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Mouse", "Rect", "Visibility" ]
+
+[node name="Label" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 531.0
+margin_top = 291.0
+margin_right = 609.0
+margin_bottom = 322.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "LOADING....
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/fading = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Label2" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 465.0
+margin_top = 378.0
+margin_right = 782.0
+margin_bottom = 559.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Moiz Ahmad
+Michael Woldai
+Salvador Ponce
+Stephen Reyes
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Dayrise_Original" type="Sprite" parent="." index="4"]
+
+position = Vector2( 502.894, 210.696 )
+scale = Vector2( 5.99102, 5.99102 )
+texture = ExtResource( 3 )
+
+
