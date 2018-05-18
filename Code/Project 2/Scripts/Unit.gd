@@ -47,6 +47,10 @@ func createUnit(newX, newY):
 	if(currentSize == maxSize):
 		deleteUnit(1)
 		currentSize -= 1
+		
+	if(!childList.has(Vector2(newX, newY))):
+		childList.append(Vector2(newX, newY))
+		currentSize += 1
 	
 	var headBlock = preload("res://Unit/UnitBlock.tscn").instance()
 	
@@ -55,7 +59,7 @@ func createUnit(newX, newY):
 	headBlock.connect("is_selected", self, "setSelection")
 	headBlock.connect("move_unit", self, "createUnit")
 	add_child(headBlock)
-	currentSize += 1
+	#currentSize += 1
 
 func deleteUnit(numUnits):
 	for i in range(numUnits):
@@ -66,6 +70,7 @@ func deleteUnit(numUnits):
 						N2.emptyNeighbors += 1 
 						if(N2.emptyNeighbors >= 4):
 							N2.emptyNeighbors = 3
+				childList.remove(childList.find(Vector2(N.unitGridX-N.pX, N.unitGridY-N.pY)))
 				N.queue_free()
 				break
 	pass

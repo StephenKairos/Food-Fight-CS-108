@@ -3,6 +3,8 @@ extends Sprite
 signal move_unit
 signal is_selected
 
+onready var attackMode = false
+
 onready var moveTexture = preload("res://Gridmap/Grid1/move_tile.png")
 onready var headTexture = preload("res://Gridmap/Grid1/smile_unit.png")
 onready var tailTexture = preload("res://Gridmap/Grid1/blank_unit.png")
@@ -27,6 +29,9 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
+	
+func triggerAttack(a_bool):
+	attackMode = a_bool
 	
 func init(parentX, parentY, gridX, gridY, head, eNeighbors, smile):
 	isHead = head
@@ -77,6 +82,7 @@ func _process(delta):
 			#print("Moved to: ", gridPos)
 			pass
 		else:
+			isSelected = false
 			for i in range(4):
 				get_child(i).hide()
 			#isHead = false
