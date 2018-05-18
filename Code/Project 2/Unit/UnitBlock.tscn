@@ -7,7 +7,7 @@
 [ext_resource path="res://Gridmap/Grid1/wizard_unit.png" type="Texture" id=5]
 [ext_resource path="res://Gridmap/Grid1/blank_unit.png" type="Texture" id=6]
 
-[node name="Sprite" type="Sprite" index="0"]
+[node name="Sprite" type="Sprite"]
 
 script = ExtResource( 1 )
 
